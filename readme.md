@@ -25,6 +25,8 @@ const rollup = require('@rbnlffl/gulp-rollup');
 const js = () => src('source/js/index.js')
   .pipe(rollup())
   .pipe(dest('public/js'));
+
+module.exports.js = js;
 ```
 
 ## Config
