@@ -22,11 +22,9 @@ yarn add @rbnlffl/gulp-rollup --dev
 const { src, dest } = require('gulp');
 const rollup = require('@rbnlffl/gulp-rollup');
 
-const js = () => src('source/js/index.js')
+module.exports.js = () => src('source/js/index.js')
   .pipe(rollup())
   .pipe(dest('public/js'));
-
-module.exports.js = js;
 ```
 
 ## Config
@@ -78,7 +76,7 @@ const { src, dest } = require('gulp');
 const plumber = require('gulp-plumber');
 const rollup = require('@rbnlffl/gulp-rollup');
 const eslint = require('@rbnlffl/rollup-plugin-eslint');
-const { nodeResolve: resolve } = require('@rollup/plugin-node-resolve');
+const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const commonjs = require('@rollup/plugin-commonjs');
 const buble = require('@rollup/plugin-buble');
 const { terser } = require('rollup-plugin-terser');
@@ -86,25 +84,25 @@ const rename = require('gulp-rename');
 
 const production = process.argv.includes('--prod');
 
-const js = () => src('source/js/index.js', {
-  sourcemaps: !production
-})
-.pipe(plumber())
-.pipe(rollup({
-  plugins: [
-    eslint(),
-    resolve(),
-    commonjs(),
-    production && buble(),
-    production && terser()
-  ].filter(plugin => plugin)
-}, {
-  format: 'iife'
-}))
-.pipe(rename('bundle.js'))
-.pipe(dest('public/js', {
-  sourcemaps: '.'
-}));
+module.exports.js = () => src('source/js/index.js', {
+    sourcemaps: !production
+  })
+  .pipe(plumber())
+  .pipe(rollup({
+    plugins: [
+      eslint(),
+      nodeResolve(),
+      commonjs(),
+      production && buble(),
+      production && terser()
+    ].filter(plugin => plugin)
+  }, {
+    format: 'iife'
+  }))
+  .pipe(rename('bundle.js'))
+  .pipe(dest('public/js', {
+    sourcemaps: '.'
+  }));
 ```
 
 ## Why a new plugin?
