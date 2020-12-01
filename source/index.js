@@ -8,18 +8,15 @@ const pluginName = '@rbnlffl/gulp-rollup';
 module.exports = (
   inputOptions = {},
   outputOptions = {}
-) => {
-  const stream = new Transform({
-    objectMode: true
-  });
-
-  stream._transform = async (file, _encoding, done) => {
+) => new Transform({
+  objectMode: true,
+  async transform(file, _encoding, done) {
     if (file.isNull()) {
       return done(null, file);
     }
 
     if (file.isStream()) {
-      return stream.emit('error', new PluginError(pluginName, 'Streams are not supported!'));
+      return this.emit('error', new PluginError(pluginName, 'Streams are not supported!'));
     }
 
     const rollupInputOptions = {
@@ -45,9 +42,7 @@ module.exports = (
 
       return done(null, file);
     } catch (rollupError) {
-      return stream.emit('error', new PluginError(pluginName, rollupError));
+      return this.emit('error', new PluginError(pluginName, rollupError));
     }
-  };
-
-  return stream;
-};
+  }
+});
