@@ -4,26 +4,24 @@ const tap = require('gulp-tap');
 const buble = require('@rollup/plugin-buble');
 const rollup = require('../source');
 
-test.before.cb(t => {
+test.before(t => new Promise(resolve => {
   src('./test/fixtures/basic.js')
     .pipe(rollup({
-      plugins: [
-        buble()
-      ]
+      plugins: [ buble() ]
     }, {
       format: 'cjs',
       exports: 'auto'
     }))
-    .pipe(tap(file => {
-      t.context.data = file.contents.toString();
-      t.end();
+    .pipe(tap(({ contents }) => {
+      t.context = contents.toString();
+      resolve();
     }));
-});
+}));
 
 test('works on its own (cjs format)', t => {
-  t.true(t.context.data.includes('module.exports'));
+  t.true(t.context.includes('module.exports'));
 });
 
 test('works together with a plugin (buble)', t => {
-  t.false(t.context.data.includes('const'));
+  t.false(t.context.includes('const'));
 });

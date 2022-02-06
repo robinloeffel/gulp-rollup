@@ -1,24 +1,25 @@
-# @rbnlffl/gulp-rollup
+# `@rbnlffl/gulp-rollup`
+
+> Feel free to [buy me a slice of pizza](https://buymeacoffee.com/robinloeffel), if you want to support this project! 🍕
 
 [![latest version on npm](https://img.shields.io/npm/v/@rbnlffl/gulp-rollup)](https://www.npmjs.com/package/@rbnlffl/gulp-rollup)
 [![npm downloads a month](https://img.shields.io/npm/dm/@rbnlffl/gulp-rollup)](https://www.npmjs.com/package/@rbnlffl/gulp-rollup)
 [![required node version](https://img.shields.io/node/v/@rbnlffl/gulp-rollup)](https://github.com/nodejs/Release)
-[![dependency status](https://img.shields.io/david/robinloeffel/gulp-rollup)](https://david-dm.org/robinloeffel/gulp-rollup)
 [![gulp peer dep](https://img.shields.io/npm/dependency-version/@rbnlffl/gulp-rollup/peer/gulp?label=gulp%20peer%20dep)](https://github.com/gulpjs/gulp)
-[![rollup dep](https://img.shields.io/npm/dependency-version/@rbnlffl/gulp-rollup/rollup?label=rollup%20dep)](https://github.com/rollup/rollup)
+[![rollup peer dep](https://img.shields.io/npm/dependency-version/@rbnlffl/gulp-rollup/peer/rollup?label=rollup%20peer%20dep)](https://github.com/rollup/rollup)
 [![package license](https://img.shields.io/npm/l/@rbnlffl/gulp-rollup)](license)
 
 > An intuitive [`gulp`](https://github.com/gulpjs/gulp) wrapper around [`rollup`](https://github.com/rollup/rollup). 🌯
 
-Nicely integrates the most recent version of [`rollup`](https://github.com/rollup/rollup) into a [`gulp`](https://github.com/gulpjs/gulp) plugin.
+Smoothly integrates [`rollup`](https://github.com/rollup/rollup) into a [`gulp`](https://github.com/gulpjs/gulp) plugin.
 
 ## Setup
 
-```sh
+```bash
 yarn add @rbnlffl/gulp-rollup --dev
 ```
 
-```js
+```javascript
 const { src, dest } = require('gulp');
 const rollup = require('@rbnlffl/gulp-rollup');
 
