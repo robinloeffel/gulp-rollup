@@ -1,3 +1,9 @@
+# v0.2.1
+_2023-09-12_
+
+* move to typescript
+* update `node` in `engines` to `>=14.18`
+
 # v0.2.0
 _2022-02-06_
 

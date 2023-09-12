@@ -1,13 +1,10 @@
 # `@rbnlffl/gulp-rollup`
 
-> Feel free to [buy me a slice of pizza](https://buymeacoffee.com/robinloeffel), if you want to support this project! 🍕
-
 [![latest version on npm](https://img.shields.io/npm/v/@rbnlffl/gulp-rollup)](https://www.npmjs.com/package/@rbnlffl/gulp-rollup)
 [![npm downloads a month](https://img.shields.io/npm/dm/@rbnlffl/gulp-rollup)](https://www.npmjs.com/package/@rbnlffl/gulp-rollup)
 [![required node version](https://img.shields.io/node/v/@rbnlffl/gulp-rollup)](https://github.com/nodejs/Release)
 [![gulp peer dep](https://img.shields.io/npm/dependency-version/@rbnlffl/gulp-rollup/peer/gulp?label=gulp%20peer%20dep)](https://github.com/gulpjs/gulp)
 [![rollup peer dep](https://img.shields.io/npm/dependency-version/@rbnlffl/gulp-rollup/peer/rollup?label=rollup%20peer%20dep)](https://github.com/rollup/rollup)
-[![package license](https://img.shields.io/npm/l/@rbnlffl/gulp-rollup)](license)
 
 > An intuitive [`gulp`](https://github.com/gulpjs/gulp) wrapper around [`rollup`](https://github.com/rollup/rollup). 🌯
 
