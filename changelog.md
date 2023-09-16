@@ -1,3 +1,8 @@
+# v0.2.2
+_2023-09-16_
+
+* fix issue with cloning the vinyl file
+
 # v0.2.1
 _2023-09-12_
 

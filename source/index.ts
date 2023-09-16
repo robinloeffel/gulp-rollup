@@ -1,4 +1,5 @@
 import { Transform } from "node:stream";
+import { Buffer } from "node:buffer";
 
 import { rollup, type InputOptions, type OutputOptions } from "rollup";
 import { type BufferFile } from "vinyl";
@@ -27,14 +28,10 @@ export = (
       ...outputOptions
     });
 
-    const clone: BufferFile = {
-      ...file,
-      contents: Buffer.from(chunk.code),
-      ...Boolean(file.sourceMap) && Boolean(chunk.map) && {
-        sourceMap: chunk.map
-      }
-    };
+    const modified = file.clone();
+    modified.contents = Buffer.from(chunk.code);
+    modified.sourceMap = chunk.map;
 
-    return done(null, clone);
+    return done(null, modified);
   }
 });
