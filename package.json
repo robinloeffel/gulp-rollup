@@ -1,7 +1,7 @@
 {
   "name": "@rbnlffl/gulp-rollup",
   "description": "An intuitive gulp wrapper around Rollup. 🌯",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "license": "MIT",
   "author": "Robin Löffel (https://robinloeffel.ch) <hi@robinloeffel.ch>",
   "homepage": "https://github.com/robinloeffel/gulp-rollup",
@@ -25,17 +25,17 @@
     "access": "public"
   },
   "devDependencies": {
-    "@types/node": "^20.6.2",
-    "@types/vinyl": "^2.0.7",
-    "eslint": "^8.49.0",
-    "eslint-config-sweet": "^12.0.0",
+    "@types/node": "^20.8.10",
+    "@types/vinyl": "^2.0.9",
+    "eslint": "^8.53.0",
+    "eslint-config-sweet": "^13.0.0",
     "gulp": "^4.0.2",
-    "rollup": "^3.29.2",
+    "rollup": "^4.3.0",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "gulp": "^4.0.2",
-    "rollup": "^3.29.2"
+    "gulp": "^4",
+    "rollup": "^3 || ^4"
   },
   "scripts": {
     "start": "tsc -w",

@@ -1,8 +1,5 @@
 module.exports = {
-  extends: [
-    "sweet",
-    "sweet/configs/typescript-typed.cjs"
-  ],
+  extends: "sweet/typescript",
   rules: {
     "unicorn/no-null": "off"
   }

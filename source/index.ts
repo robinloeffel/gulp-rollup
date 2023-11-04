@@ -11,11 +11,13 @@ export = (
   objectMode: true,
   async transform(file: BufferFile, _encoding, done) {
     if (file.isNull()) {
-      return done(null, file);
+      done(null, file);
+      return;
     }
 
     if (file.isStream()) {
-      return done(new Error("Streams are not supported!"), file);
+      done(new Error("Streams are not supported!"), file);
+      return;
     }
 
     const build = await rollup({
@@ -32,6 +34,6 @@ export = (
     modified.contents = Buffer.from(chunk.code);
     modified.sourceMap = chunk.map;
 
-    return done(null, modified);
+    done(null, modified);
   }
 });

@@ -1,3 +1,9 @@
+# v0.2.3
+_2023-11-04_
+
+* loosen `rollup` peer dependency version
+* loosen `gulp` peer dependency version
+
 # v0.2.2
 _2023-09-16_
 
