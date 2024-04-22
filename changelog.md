@@ -1,3 +1,8 @@
+# v0.2.4
+_2024-04-22_
+
+* allow `gulp` 5.x as peer dependency
+
 # v0.2.3
 _2023-11-04_
 

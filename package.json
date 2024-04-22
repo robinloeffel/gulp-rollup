@@ -1,45 +1,43 @@
 {
   "name": "@rbnlffl/gulp-rollup",
+  "version": "0.2.4",
   "description": "An intuitive gulp wrapper around Rollup. 🌯",
-  "version": "0.2.3",
-  "license": "MIT",
-  "author": "Robin Löffel (https://robinloeffel.ch) <hi@robinloeffel.ch>",
-  "homepage": "https://github.com/robinloeffel/gulp-rollup",
-  "repository": "https://github.com/robinloeffel/gulp-rollup.git",
-  "bugs": "https://github.com/robinloeffel/gulp-rollup/issues",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "engines": {
-    "node": ">=14.18"
-  },
-  "files": [
-    "source",
-    "dist"
-  ],
   "keywords": [
     "gulpplugin",
     "rollup",
     "bundler"
   ],
-  "publishConfig": {
-    "access": "public"
+  "homepage": "https://github.com/robinloeffel/gulp-rollup",
+  "bugs": "https://github.com/robinloeffel/gulp-rollup/issues",
+  "repository": "https://github.com/robinloeffel/gulp-rollup.git",
+  "license": "MIT",
+  "author": "Robin Löffel (https://robinloeffel.ch) <hi@robinloeffel.ch>",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "source",
+    "dist"
+  ],
+  "scripts": {
+    "prepublishOnly": "rm -rf dist && tsc",
+    "start": "tsc -w",
+    "test": "gulp -f test/index.cjs"
   },
   "devDependencies": {
-    "@types/node": "^20.8.10",
-    "@types/vinyl": "^2.0.9",
-    "eslint": "^8.53.0",
-    "eslint-config-sweet": "^13.0.0",
-    "gulp": "^4.0.2",
-    "rollup": "^4.3.0",
-    "typescript": "^5.2.2"
+    "@tsconfig/strictest": "^2.0.5",
+    "@types/node": "^20.12.7",
+    "@types/vinyl": "^2.0.12",
+    "eslint": "^8.57.0",
+    "eslint-config-sweet": "^20.0.0",
+    "gulp": "^5.0.0",
+    "rollup": "^4.16.2",
+    "typescript": "^5.4.5"
   },
   "peerDependencies": {
-    "gulp": "^4",
+    "gulp": "^4 || ^5",
     "rollup": "^3 || ^4"
   },
-  "scripts": {
-    "start": "tsc -w",
-    "test": "gulp -f test/index.cjs",
-    "prepublishOnly": "rm -rf dist && tsc"
+  "publishConfig": {
+    "access": "public"
   }
 }

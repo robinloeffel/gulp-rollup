@@ -1,8 +1,7 @@
 # `@rbnlffl/gulp-rollup`
 
 [![latest version on npm](https://img.shields.io/npm/v/@rbnlffl/gulp-rollup)](https://www.npmjs.com/package/@rbnlffl/gulp-rollup)
-[![npm downloads a month](https://img.shields.io/npm/dm/@rbnlffl/gulp-rollup)](https://www.npmjs.com/package/@rbnlffl/gulp-rollup)
-[![required node version](https://img.shields.io/node/v/@rbnlffl/gulp-rollup)](https://github.com/nodejs/Release)
+[![npm downloads a month](https://img.shields.io/npm/dw/@rbnlffl/gulp-rollup)](https://www.npmjs.com/package/@rbnlffl/gulp-rollup)
 [![gulp peer dep](https://img.shields.io/npm/dependency-version/@rbnlffl/gulp-rollup/peer/gulp?label=gulp%20peer%20dep)](https://github.com/gulpjs/gulp)
 [![rollup peer dep](https://img.shields.io/npm/dependency-version/@rbnlffl/gulp-rollup/peer/rollup?label=rollup%20peer%20dep)](https://github.com/rollup/rollup)
 
@@ -13,7 +12,7 @@ Smoothly integrates [`rollup`](https://github.com/rollup/rollup) into a [`gulp`]
 ## Setup
 
 ```bash
-yarn add @rbnlffl/gulp-rollup --dev
+npm i @rbnlffl/gulp-rollup -D
 ```
 
 ```javascript
@@ -27,7 +26,7 @@ module.exports.js = () => src('source/js/index.js')
 
 ## Config
 
-The plugin takes two options objects and passes them mostly unmodified down to `rollup`. The first object is of type [`InputOptions`](https://rollupjs.org/guide/en/#inputoptions-object) and the second one of type [`OutputOptions`](https://rollupjs.org/guide/en/#outputoptions-object). Below you'll find the most common options.
+The plugin takes two options objects and passes them unmodified down to `rollup`. The first object is of type [`InputOptions`](https://rollupjs.org/guide/en/#inputoptions-object) and the second one of type [`OutputOptions`](https://rollupjs.org/guide/en/#outputoptions-object). Below you'll find the most common options.
 
 ### `inputOptions`
 

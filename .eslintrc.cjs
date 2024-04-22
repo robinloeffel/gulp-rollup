@@ -1,5 +1,5 @@
 module.exports = {
-  extends: "sweet/typescript",
+  extends: "sweet",
   rules: {
     "unicorn/no-null": "off"
   }

@@ -1,8 +1,8 @@
-import { Transform } from "node:stream";
 import { Buffer } from "node:buffer";
+import { Transform } from "node:stream";
 
 import { rollup, type InputOptions, type OutputOptions } from "rollup";
-import { type BufferFile } from "vinyl";
+import type { BufferFile } from "vinyl";
 
 export = (
   inputOptions: InputOptions,
